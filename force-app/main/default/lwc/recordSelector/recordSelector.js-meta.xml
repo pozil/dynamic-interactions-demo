@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>53.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Record Selector</masterLabel>
+    <targets>
+        <target>lightning__AppPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__AppPage">
+            <event
+        name="itemselected"
+        label="Item Selected"
+        description="This event fires when an item is selected."
+      >
+                <schema>
+                    {
+                        "type": "object",
+                        "properties": {
+                            "recordId": {
+                                "type": "string",
+                                "title": "Record ID",
+                                "description": "15 or 18-digit record ID."
+                            },
+                            "objectApiName": {
+                                "type": "string",
+                                "title": "Object API Name",
+                                "description": "An object API name (include '__c' for custom objects)"
+                            }
+                       }
+                    }
+                </schema>
+            </event>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

@@ -1,0 +1,30 @@
+<template>
+  <lightning-card title="Record Selector">
+    <div class="slds-card__body slds-card__body_inner">
+      <lightning-combobox
+        label="Object API Name"
+        value={objectApiName}
+        options={objectOptions}
+        onchange={handleObjectApiNameChange}
+        class="slds-var-m-bottom_medium"
+        required
+      ></lightning-combobox>
+      <lightning-combobox
+        label="Record"
+        value={recordId}
+        options={recordOptions}
+        onchange={handleRecordIdChange}
+        field-level-help="Only the first 10 records are displayed"
+        class="slds-var-m-bottom_medium"
+        required
+      ></lightning-combobox>
+      <div class="slds-var-m-top_medium slds-text-align_right">
+        <lightning-button
+          label="View Record"
+          onclick={handleRecordSelected}
+          variant="brand"
+        ></lightning-button>
+      </div>
+    </div>
+  </lightning-card>
+</template>

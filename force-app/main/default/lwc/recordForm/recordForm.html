@@ -1,0 +1,32 @@
+<template>
+  <lightning-card title="Record Form">
+    <div class="slds-card__body slds-card__body_inner">
+      <h2
+        if:true={isEmptyState}
+        class="slds-var-m-around_xx-large slds-text-heading_medium slds-text-color_weak slds-text-align_center"
+      >
+        Select a record.
+      </h2>
+
+      <!-- Record form -->
+      <lightning-record-form
+        if:false={isEmptyState}
+        object-api-name={objectApiName}
+        record-id={recordId}
+        layout-type="Full"
+        mode="readonly"
+        columns={columns}
+        onerror={handleRecordFormError}
+      ></lightning-record-form>
+
+      <!-- Error message -->
+      <div
+        if:true={errorMessage}
+        class="slds-notify slds-notify_alert slds-alert_error"
+        role="alert"
+      >
+        <h2>{errorMessage}</h2>
+      </div>
+    </div>
+  </lightning-card>
+</template>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>53.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Record Form</masterLabel>
+    <targets>
+        <target>lightning__AppPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__AppPage">
+            <property
+        name="objectApiName"
+        label="Object API Name"
+        type="String"
+      />
+            <property name="recordId" label="Record ID" type="String" />
+            <property
+        name="columns"
+        label="Number of Collumns"
+        type="Integer"
+        min="1"
+        default="1"
+        required="true"
+      />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

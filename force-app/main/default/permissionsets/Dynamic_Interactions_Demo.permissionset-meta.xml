@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Dynamic Interactions Demo</label>
+    <tabSettings>
+        <tab>Dynamic_Interactions_Demo</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+</PermissionSet>
