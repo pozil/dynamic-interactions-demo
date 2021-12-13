@@ -22,6 +22,7 @@ export default class AccountList extends LightningElement {
   async handleObjectApiNameChange(event) {
     this.objectApiName = event.detail.value;
     this.recordId = null;
+    this.recordOptions = [];
     try {
       this.recordOptions = await getRecords({
         objectApiName: this.objectApiName
