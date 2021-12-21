@@ -16,7 +16,7 @@
             <property name="recordId" label="Record ID" type="String" />
             <property
         name="columns"
-        label="Number of Collumns"
+        label="Number of Columns"
         type="Integer"
         min="1"
         default="1"
