@@ -9,9 +9,9 @@
     <targetConfigs>
         <targetConfig targets="lightning__AppPage">
             <event
-        name="itemselected"
-        label="Item Selected"
-        description="This event fires when an item is selected."
+        name="recordselected"
+        label="Record Selected"
+        description="This event fires when a record is selected."
       >
                 <schema>
                     {

@@ -4,7 +4,7 @@
         <sourceName>c_recordSelector1</sourceName>
         <sourceProperties>
             <name>eventName</name>
-            <value>itemselected</value>
+            <value>recordselected</value>
         </sourceProperties>
         <sourceType>Component</sourceType>
         <targets>

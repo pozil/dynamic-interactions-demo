@@ -39,7 +39,7 @@ export default class AccountList extends LightningElement {
   handleRecordSelected() {
     const { recordId, objectApiName } = this;
     this.dispatchEvent(
-      new CustomEvent("itemselected", {
+      new CustomEvent("recordselected", {
         detail: { objectApiName, recordId }
       })
     );
