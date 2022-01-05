@@ -10,10 +10,14 @@ export default class AccountList extends LightningElement {
 
   async connectedCallback() {
     try {
-      this.objectOptions = await getObjectNames();
-      this.recordOptions = await getRecords({
-        objectApiName: this.objectApiName
-      });
+      const results = await Promise.all([
+        getObjectNames(),
+        getRecords({
+          objectApiName: this.objectApiName
+        })
+      ]);
+      this.objectOptions = results[0];
+      this.recordOptions = results[1];
     } catch (error) {
       console.error(error);
     }
