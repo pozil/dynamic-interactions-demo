@@ -2,7 +2,7 @@ import { LightningElement } from "lwc";
 import getObjectNames from "@salesforce/apex/RecordSelectorController.getObjectNames";
 import getRecords from "@salesforce/apex/RecordSelectorController.getRecords";
 
-export default class AccountList extends LightningElement {
+export default class RecordSelector extends LightningElement {
   objectApiName = "Account";
   objectOptions = [];
   recordId;
